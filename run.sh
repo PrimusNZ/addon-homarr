@@ -13,10 +13,6 @@ if [ ! -d /share/homarr/icons ]; then
     mkdir -p /share/homarr/icons
 fi
 
-if [ ! -d /share/homarr/data ]; then
-    mkdir -p /share/homarr/data
-fi
-
 if [ -d /app/data/configs ]; then
     rm -rf /app/data/configs
 fi
@@ -25,15 +21,9 @@ if [ -d /app/public/icons ]; then
     rm -rf /app/public/icons
 fi
 
-if [ -d /data ]; then
-    rm -rf /data
-fi
-
 
 ln -s /share/homarr/configs /app/data/configs
 ln -s /share/homarr/icons /app/public/icons
-ln -s /share/homarr/data /data
-
 
 echo "Migrating database..."
 cd ./migrate; yarn db:migrate & PID=$!
