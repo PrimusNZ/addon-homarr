@@ -13,10 +13,10 @@
     "armhf"
   ],
   "ports": {
-    "8989/tcp": 8989
+    "7575/tcp": 7575
   },
   "ports_description": {
-    "8989/tcp": "web interface"
+    "7575/tcp": "web interface"
   },
   "map": [
     "share:rw",
@@ -25,15 +25,6 @@
   ],
   "webui": "http://[HOST]:[PORT:8989]",
   "boot": "auto",
-  "options": {
-    "PUID": 1001,
-    "PGID": 1001
-  },
-  "schema": {
-    "PUID": "int",
-    "PGID": "int",
-    "TZ": "str?"
-  },
   "backup_exclude": [
     "**/Backups/*",
     "**/logs/*",

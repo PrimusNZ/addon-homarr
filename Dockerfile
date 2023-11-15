@@ -2,6 +2,8 @@ ARG BUILD_FROM
 # hadolint ignore=DL3006
 FROM $BUILD_FROM
 
+RUN apt update && apt install -y curl
+
 RUN curl -J -L -o /tmp/bashio.tar.gz \
         "https://github.com/hassio-addons/bashio/archive/v0.7.1.tar.gz" \
     && mkdir /tmp/bashio \
