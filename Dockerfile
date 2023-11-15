@@ -18,4 +18,4 @@ RUN curl -J -L -o /tmp/bashio.tar.gz \
 #    && sed -i "s|/config|/share/homarr/config|g" /etc/s6-overlay/s6-rc.d/svc-homarr/run
 
 # copy local files
-COPY root/ /
+#COPY root/ /
