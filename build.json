@@ -1,0 +1,13 @@
+{
+    "build_from_template": {
+        "image": "ghcr.io/ajnart/homarr",
+        "version": "latest"
+    },
+    "build_from": {
+        "armhf": "ghcr.io/ajnart/homarr:latest",
+        "aarch64": "ghcr.io/ajnart/homarr:latest",
+        "amd64": "ghcr.io/ajnart/homarr:latest"
+    },
+    "squash": false,
+    "args": {}
+}
