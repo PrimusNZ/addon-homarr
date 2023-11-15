@@ -15,9 +15,5 @@ RUN curl -J -L -o /tmp/bashio.tar.gz \
     && ln -s /usr/lib/bashio/bashio /usr/bin/bashio \
     && rm -fr /tmp/* 
 
-# use /share/homarr/config instead of /config for hass.io environment
-#RUN sed -i "s|/config|/share/homarr/config|g" /etc/s6-overlay/s6-rc.d/init-homarr-config/run \
-#    && sed -i "s|/config|/share/homarr/config|g" /etc/s6-overlay/s6-rc.d/svc-homarr/run
-
 # copy local files
-#COPY root/ /
+COPY run.sh ./scripts/run.sh
